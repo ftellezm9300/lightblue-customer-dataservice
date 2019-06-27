@@ -55,7 +55,7 @@ public class CustomerController {
                     .password(cloudantProperties.getPassword())
                     .build();
             cloudant = cloudantClient.database(cloudantProperties.getDatabase(), true);
-			logger.info("Database info: " + cloudant.getInfo().toString());
+			logger.info("Database info: " + cloudant.info().toString());
         } catch (MalformedURLException e) {
             logger.error(e.getMessage(), e);
             throw e;
